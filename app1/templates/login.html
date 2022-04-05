@@ -1,4 +1,4 @@
-<!-- Add your content of head and header -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,8 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>Tweet Analyzer</h1>
-                    <p class="">Check sentiments of tweets!</p>
+                    <h1>Log In</h1>
                 </div>
             </div>
         </div>
@@ -75,11 +74,12 @@
                     <div class="section-container-spacer">
                         <h2 class="text-center">Log In</h2>
                     </div>
-                    <form action="analyze.html" method="post">
+                    <form method="POST">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Name">
+                                    <input type="email" name="email" class="form-control" placeholder="Email">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -88,46 +88,15 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Log In</button>
-                        <a href=" {% static '' %} " class="btn btn-default">Forgot Password</a>
+                        <input type="submit" class="btn btn-primary" value="Log In">
+                        <!-- <a href=" {% static '' %} " class="btn btn-default">Forgot Password</a> -->
                     </form>
-                    <h5>New here? <a href=" {% static 'register.html' %} ">Click Here to Register</a></h5>
+                    <h5>New here? <a href=" {% url 'REGISTER' %} ">Click Here to Register</a></h5>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section-container" id="contact-section-container">
-        <div class="container contact-form-container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-2 col-md-8">
-                    <div class="section-container-spacer">
-                        <h2 class="text-center">Get in touch</h2>
-                    </div>
-                    <form action="" method="post">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send message</button>
-                        <a href=" {% static '' %} " class="btn btn-default">Reset</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="footer-container white-text-container">
         <div class="container">
@@ -158,6 +127,10 @@
     </footer>
 
     <script type="text/javascript" src=" {% static './main.faaf51f9.js' %} "></script>
+    
+    {% if msg %}
+    <script>alert('{{msg}}')</script>
+    {% endif %}
 </body>
 
 </html>

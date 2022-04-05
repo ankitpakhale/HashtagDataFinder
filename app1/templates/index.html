@@ -1,4 +1,4 @@
-<!-- Add your content of head and header -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +13,8 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link href=" {% static './assets/apple-touch-icon.png' %} " rel="apple-touch-icon">
-    <link href=" {% static './assets/favicon.ico' %} " rel="icon">
+    <link href=" {% static './assets/images/apple-touch-icon.png' %} " rel="apple-touch-icon">
+    <link href=" {% static './assets/images/favicon.ico' %} " rel="icon">
 
     <title>Home</title>
 
@@ -45,6 +45,7 @@
                                 Us</a></li>
                         <li><a href=" {% static 'login.html' %} " title="" class="anchor-link">Check Hashtag</a></li>
                         <li><a href=" {% static 'analyzeTweet.html' %} " title="" class="anchor-link">Check Tweet</a></li>
+                        <li><a href=" {% url 'LOGOUT' %} " title="" class="anchor-link">Log out</a></li>
                     </ul>
 
                 </div>
@@ -203,49 +204,6 @@
         </div>
     </div>
 </div> -->
-
-
-    <div class="section-container" id="contact-section-container">
-        <div class="container contact-form-container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-2 col-md-8">
-                    <div class="section-container-spacer">
-                        <h2 class="text-center">Get in touch</h2>
-                    </div>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
-                        </div>
-
-                        <!-- <div class="form-group">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1">Email me a copy
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option2">I am a human
-                        </label>
-                    </div> -->
-
-                        <button type="submit" class="btn btn-primary">Send message</button>
-                        <a href=" {% static '' %} " class="btn btn-default">Reset</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="footer-container white-text-container">
         <div class="container">

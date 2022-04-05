@@ -8,5 +8,13 @@ urlpatterns = [
     
     
     path('',views.index,name='INDEX'),
+    path('analyze/',views.analyze,name='ANALYZE'),
+    path('analyzeTweet/',views.analyzeTweet,name='ANALYZETWEET'),
+    path('components/',views.components,name='COMPONENTS'),
+    path('forgotPass/',views.forgotPass,name='FORGOTPASS'),
+    path('login/',views.login,name='LOGIN'),
+    path('register/',views.register,name='REGISTER'),
+    path('logout/', views.userLogOut, name='LOGOUT'), 
+    path('contact/',views.contact,name='CONTACT'),
     
 ]
