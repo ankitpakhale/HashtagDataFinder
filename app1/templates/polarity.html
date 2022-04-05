@@ -1,0 +1,12 @@
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="text">
+    <input type="submit" value="Ok">
+</form>
+
+
+{% if data %}
+    <h2>sentiment : {{ data }}</h2>
+    <h2>accu : {{ val }}</h2>
+{% endif %}
+    
