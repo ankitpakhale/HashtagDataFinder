@@ -1,0 +1,163 @@
+<!-- Add your content of head and header -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+    <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href=" {% static './assets/apple-touch-icon.png' %} " rel="apple-touch-icon">
+    <link href=" {% static './assets/favicon.ico' %} " rel="icon">
+
+    <title>Log In</title>
+
+    <link href=" {% static './assets/css/main.97292821.css' %} " rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Add your content of header -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="navbar-collapse">
+                    <button type="button" class="close" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href=" {% static 'index.html' %} " title="" class="anchor-link">Home</a></li>
+                        <li><a href=" {% static './register.html#contact-section-container' %} " title="" class="anchor-link">Contact
+                                Us</a></li>
+                        <li><a href=" {% static 'login.html' %} " title="" class="anchor-link">Check Hashtag</a></li>
+                        <li><a href=" {% static 'analyzeTweet.html' %} " title="" class="anchor-link">Check Tweet</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Add your site or app content here -->
+    <div class="background-image-container white-text-container"
+        style="background-image: url(' {% static './assets/images/tweetf.jpg' %} ');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Tweet Analyzer</h1>
+                    <p class="">Check sentiments of tweets!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="login-section-container">
+        <div class="container contact-form-container">
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-2 col-md-8">
+                    <div class="section-container-spacer">
+                        <h2 class="text-center">Log In</h2>
+                    </div>
+                    <form action="analyze.html" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                        <a href=" {% static '' %} " class="btn btn-default">Forgot Password</a>
+                    </form>
+                    <h5>New here? <a href=" {% static 'register.html' %} ">Click Here to Register</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="contact-section-container">
+        <div class="container contact-form-container">
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-2 col-md-8">
+                    <div class="section-container-spacer">
+                        <h2 class="text-center">Get in touch</h2>
+                    </div>
+                    <form action="" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send message</button>
+                        <a href=" {% static '' %} " class="btn btn-default">Reset</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-container white-text-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About us</h4>
+                    <p>We provide charts on the basis of hashtags in twitter with accurate analysis.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Do you like ? Share this !</h4>
+                    <div>
+                        <p>
+                            <a href="https://www.twitter.com" class="fa-icon" title="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.facebook.com" class="fa-icon" title="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com" class="fa-icon" title="">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src=" {% static './main.faaf51f9.js' %} "></script>
+</body>
+
+</html>

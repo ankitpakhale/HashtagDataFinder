@@ -14,6 +14,9 @@ from django.contrib import messages
 
 # Create your views here.
 
+def index(request):
+    return render(request, 'index.html')
+
 
 def HashtagPrediction(request):
     if request.POST:
@@ -245,3 +248,5 @@ def Polarity(request):
             val = neg_word/(pos_word+neg_word)
         return render(request,'polarity.html',{'data':data,'val':val})
     return render(request,'polarity.html')
+
+
