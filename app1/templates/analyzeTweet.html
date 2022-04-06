@@ -40,17 +40,24 @@
                     <button type="button" class="close" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=" {% static 'index.html' %} " title="" class="anchor-link">Home</a></li>
-                        <li><a href=" {% static './register.html#contact-section-container' %} " title="" class="anchor-link">Contact
-                                Us</a></li>
-                        <li><a href=" {% static 'login.html' %} " title="" class="anchor-link">Check Hashtag</a></li>
-                        <li><a href=" {% static 'analyzeTweet.html#analyzeTweet' %} " title="" class="anchor-link">Check Tweet</a></li>
+                        <li><a href=" {% url 'INDEX' %} " class="anchor-link">Home</a></li>
+                        
+                        <li><a href=" {% url 'ANALYZETWEET' %} " class="anchor-link">Check Tweet</a></li>
+                        
+                        <li><a href=" {% url 'polarity' %} " class="anchor-link">Analyze Tweet</a></li>
+                        
+                        <li><a href=" {% url 'hashtag' %} " class="anchor-link">Hashtag Prediction</a></li>
+                        
+                        <li><a href=" {% url 'CONTACT' %} " class="anchor-link">Contact Us</a></li>
+                        
+                        <li><a href=" {% url 'LOGOUT' %} " class="anchor-link">Logout</a></li>
                     </ul>
-
                 </div>
+                
             </div>
         </nav>
     </header>
+
 
     <!-- Add your site or app content here -->
     <div class="background-image-container white-text-container"
@@ -118,67 +125,6 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Analyze</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-container section-half-background-image-container">
-        <div class="image-column" style="background-image: url(' {% static './assets/images/th.jpg' %} ')"></div>
-        <div class="container">
-            <div class="row">
-                <div class="section-label reveal">
-                    <p></p>
-                </div>
-                <div class="col-md-6 col-md-offset-6 text-column">
-                    <h2>Know about Twitter</h2>
-                    <h3>Since 2006</h3>
-                    <p style="text-align: justify;">Twitter was created by Jack Dorsey, Noah Glass, Biz Stone, and Evan
-                        Williams in March 2006 and launched in
-                        July of that year. By 2012, more than 100 million users posted 340 million tweets a day.</p>
-                    <p style="text-align: justify;">Twitter is an American microblogging and social networking service
-                        on which users
-                        post and interact with messages known as "tweets".</p>
-                    <p style="text-align: justify;"> Registered users can post, like, and retweet tweets, but
-                        unregistered users can
-                        only read those that are publicly available. Users interact with Twitter through browser or
-                        mobile frontend software,
-                        or programmatically via its APIs.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section-container" id="contact-section-container">
-        <div class="container contact-form-container">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-2 col-md-8">
-                    <div class="section-container-spacer">
-                        <h2 class="text-center">Get in touch</h2>
-                    </div>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Send message</button>
-                        <a href=" {% static '' %} " class="btn btn-default">Reset</a>
                     </form>
                 </div>
             </div>

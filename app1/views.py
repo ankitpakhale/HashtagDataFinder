@@ -25,11 +25,6 @@ def analyze(request):
         return render(request, 'analyze.html')
     return redirect('LOGIN')
 
-def analyzeTweet(request):
-    if 'email' in request.session:
-        return render(request, 'analyzeTweet.html')
-    return redirect('LOGIN')
-
 def components(request):
     if 'email' in request.session:
         return render(request, 'components.html')
@@ -148,10 +143,12 @@ def HashtagPrediction(request):
             #  Print the last 5 tweets
             print("Show the 5 recent tweets:\n")
             i=1
+            li = []
             for tweet in posts[:2]:
                 print(str(i) +') '+ tweet.text + '\n')
                 i= i+1
-                print(i)
+                li.append(tweet.text)
+                print("This is I",i)
             
             # Create a dataframe with a column called Tweets
             df = pd.DataFrame([tweet.text for tweet in posts], columns=['Tweets'])
@@ -258,8 +255,8 @@ def HashtagPrediction(request):
                 ntweets = ntweets['Tweets']
                 ntweets
             except:
-                messages.add_message(request, messages.ERROR, 'Enter Proper Hash Tag ...')
-                return render(request,'HashtagPrediction.html')
+                # messages.add_message(request, messages.ERROR, 'Enter Proper Hash Tag ...')
+                return render(request,'HashtagPrediction.html', {'msg': 'Enter Proper Hash Tag ...'})
 
             neg = float(round((ntweets.shape[0] / df.shape[0]) * 5, 1))
             
@@ -285,7 +282,7 @@ def HashtagPrediction(request):
             
             data = 'media/OutPut.png'
             
-            return render(request,'HashtagPrediction.html',{'data':path,'pos':pos,'neg':neg,'net':net})
+            return render(request,'HashtagPrediction.html',{'data':path,'pos':pos,'neg':neg,'net':net, 'li':li})
         return render(request,'HashtagPrediction.html')
     return redirect('LOGIN')
 
@@ -332,10 +329,10 @@ def Polarity(request):
             data = ""
             val = 0
             if pos_word > neg_word:
-                data += "The sentence was POSITIVE, with a probability of"
+                data += "The sentence was POSITIVE"
                 val = pos_word/(pos_word+neg_word)
             else:
-                data += "The sentence was NEGATIVE, with a probability of"
+                data += "The sentence was NEGATIVE"
                 val = neg_word/(pos_word+neg_word)
             return render(request,'polarity.html',{'data':data,'val':val})
         return render(request,'polarity.html')

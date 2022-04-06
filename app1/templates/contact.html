@@ -35,23 +35,26 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-
                 <div class="navbar-collapse">
                     <button type="button" class="close" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=" {% static 'index.html' %} " title="" class="anchor-link">Home</a></li>
-                        <li><a href=" {% static './register.html#contact-section-container' %} " title="" class="anchor-link">Contact
-                                Us</a></li>
-                        <li><a href=" {% static 'login.html' %} " title="" class="anchor-link">Check Hashtag</a></li>
-                        <li><a href=" {% static 'analyzeTweet.html' %} " title="" class="anchor-link">Check Tweet</a></li>
-                    </ul>
+                        <li><a href=" {% url 'INDEX' %} " class="anchor-link">Home</a></li>
 
+                        <li><a href=" {% url 'ANALYZETWEET' %} " class="anchor-link">Check Tweet</a></li>
+
+                        <li><a href=" {% url 'polarity' %} " class="anchor-link">Analyze Tweet</a></li>
+
+                        <li><a href=" {% url 'hashtag' %} " class="anchor-link">Hashtag Prediction</a></li>
+
+                        <li><a href=" {% url 'CONTACT' %} " class="anchor-link">Contact Us</a></li>
+
+                        <li><a href=" {% url 'LOGOUT' %} " class="anchor-link">Logout</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-
 
 
     <!-- Add your site or app content here -->
