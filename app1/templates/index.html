@@ -40,14 +40,18 @@
                     <button type="button" class="close" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=" {% static 'index.html' %} " title="" class="anchor-link">Home</a></li>
-                        <li><a href=" {% static './register.html#contact-section-container' %} " title="" class="anchor-link">Contact
-                                Us</a></li>
-                        <li><a href=" {% static 'login.html' %} " title="" class="anchor-link">Check Hashtag</a></li>
-                        <li><a href=" {% static 'analyzeTweet.html' %} " title="" class="anchor-link">Check Tweet</a></li>
-                        <li><a href=" {% url 'LOGOUT' %} " title="" class="anchor-link">Log out</a></li>
+                        <li><a href=" {% url 'INDEX' %} " class="anchor-link">Home</a></li>
+                        
+                        <li><a href=" {% url 'ANALYZETWEET' %} " class="anchor-link">Check Tweet</a></li>
+                        
+                        <li><a href=" {% url 'polarity' %} " class="anchor-link">Polarity</a></li>
+                        
+                        <li><a href=" {% url 'hashtag' %} " class="anchor-link">Hashtag Prediction</a></li>
+                        
+                        <li><a href=" {% url 'CONTACT' %} " class="anchor-link">Contact Us</a></li>
+                        
+                        <li><a href=" {% url 'LOGOUT' %} " class="anchor-link">Logout</a></li>
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -112,7 +116,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-12 section-container-spacer">
-                    <h3 class="text-center"><a href=" {% static 'login.html' %} " class="btn btn-info btn-lg">Click Here To Log In</a>
+                    <h3 class="text-center"><a href=" {% url 'LOGOUT' %} " class="btn btn-info btn-lg">Click Here
+                            To Logout</a>
                     </h3>
                 </div>
             </div>
@@ -205,6 +210,7 @@
     </div>
 </div> -->
 
+
     <footer class="footer-container white-text-container">
         <div class="container">
             <div class="row">
@@ -212,7 +218,6 @@
                     <h4>About us</h4>
                     <p>We provide charts on the basis of hashtags in twitter with accurate analysis.</p>
                 </div>
-
                 <div class="col-md-4">
                     <h4>Do you like ? Share this !</h4>
                     <div>
